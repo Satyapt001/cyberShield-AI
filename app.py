@@ -15,7 +15,12 @@ app = Flask(__name__)
 # =========================
 # Pages
 # =========================
-
+@app.route("/healthz")
+def health_check():
+    return {
+        "status": "healthy"
+    }, 200
+    
 @app.route("/")
 def home():
     return render_template("scan.html")
