@@ -1,2 +1,2 @@
 # cyberShield-AI
-checks for spam and non spam emails in a detailed manner.
+Cysheild-Ai is one of its kind malware detection system using Machine Learning algorithms.
