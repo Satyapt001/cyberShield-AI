@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CyberShield AI - Security Analyzer</title>
+    <link rel="stylesheet" href="/static/style.css">
+</head>
+
+<body>
+
+    <nav>
+        <div class="logo">CyberShield AI</div>
+        <div class="nav-right">
+            <div class="nav-links">
+                <a href="/">Scanner</a>
+                <a href="/dashboard">Dashboard</a>
+            </div>
+            <button class="theme-toggle" id="themeToggleBtn" title="Modify Interface Colors"
+                onclick="toggleTheme()"></button>
+        </div>
+    </nav>
+
+    <div class="workspace-container">
+
+        <div class="left-panel">
+            <div class="panel-header">
+                <h1>Intelligent Email<br>Threat Detection</h1>
+                <p class="hero-subtitle">Isolate malicious content blocks, payload structures, spam indices, and
+                    phishing link anomalies in real time.</p>
+            </div>
+
+            <div class="scan-card">
+                <textarea id="message"
+                    placeholder="Input suspicious message text strings here to run full machine learning validation checks..."></textarea>
+
+                <button class="action-btn" onclick="scanThreat()">
+                    Analyze Threat Vector
+                </button>
+
+                <a href="/dashboard" class="secondary-nav-btn">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none"
+                        stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+                        <rect width="7" height="9" x="3" y="3" rx="1" />
+                        <rect width="7" height="5" x="14" y="3" rx="1" />
+                        <rect width="7" height="9" x="14" y="12" rx="1" />
+                        <rect width="7" height="5" x="3" y="16" rx="1" />
+                    </svg>
+                    View Intelligence Dashboard
+                </a>
+            </div>
+        </div>
+
+        <div class="right-panel" id="result">
+            <div class="empty-state">
+                <div>
+                    <p
+                        style="font-size: 1.1rem; margin-bottom: 6px; color: var(--text); font-style: normal; font-weight: 500;">
+                        Awaiting Inspection Payload</p>
+                    <p style="font-size: 0.85rem;">Input configuration tokens on the left panel to display instantaneous
+                        deep scanning logs.</p>
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+    <footer>
+        <div class="footer-left">
+            <div class="live-indicator-dot"></div>
+            SYS_STATUS: OPERATIONAL
+        </div>
+        <div class="footer-right">&copy; 2026 CyberShield AI Engine</div>
+    </footer>
+
+    <script src="/static/script.js"></script>
+</body>
+
+</html>

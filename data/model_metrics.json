@@ -1,0 +1,37 @@
+[
+    {
+        "Model": "Linear SVM",
+        "Accuracy": 98.03,
+        "Precision": 97.76,
+        "Recall": 87.33,
+        "F1 Score": 92.25
+    },
+    {
+        "Model": "Random Forest",
+        "Accuracy": 97.49,
+        "Precision": 98.41,
+        "Recall": 82.67,
+        "F1 Score": 89.86
+    },
+    {
+        "Model": "Naive Bayes",
+        "Accuracy": 97.22,
+        "Precision": 100.0,
+        "Recall": 79.33,
+        "F1 Score": 88.48
+    },
+    {
+        "Model": "Logistic Regression",
+        "Accuracy": 96.77,
+        "Precision": 97.5,
+        "Recall": 78.0,
+        "F1 Score": 86.67
+    },
+    {
+        "Model": "Decision Tree",
+        "Accuracy": 95.7,
+        "Precision": 91.8,
+        "Recall": 74.67,
+        "F1 Score": 82.35
+    }
+]

@@ -1,0 +1,155 @@
+[
+    {
+        "spam_prediction": "Spam",
+        "spam_confidence": 64.64,
+        "phishing_prediction": "Safe",
+        "phishing_confidence": 88.14,
+        "risk_score": 100,
+        "threat_level": "HIGH",
+        "keywords": [
+            "urgent",
+            "verify",
+            "account",
+            "click",
+            "login"
+        ],
+        "url_count": 1,
+        "timestamp": "2026-06-19 23:28:04"
+    },
+    {
+        "spam_prediction": "Spam",
+        "spam_confidence": 85.5,
+        "phishing_prediction": "Safe",
+        "phishing_confidence": 96.78,
+        "risk_score": 100,
+        "threat_level": "HIGH",
+        "keywords": [
+            "free",
+            "winner",
+            "account",
+            "claim",
+            "reward",
+            "bonus",
+            "limited",
+            "click",
+            "offer"
+        ],
+        "url_count": 0,
+        "timestamp": "2026-06-19 23:29:09"
+    },
+    {
+        "spam_prediction": "Safe",
+        "spam_confidence": 81.0,
+        "phishing_prediction": "Safe",
+        "phishing_confidence": 89.17,
+        "risk_score": 89,
+        "threat_level": "HIGH",
+        "keywords": [],
+        "url_count": 0,
+        "timestamp": "2026-06-19 23:29:32"
+    },
+    {
+        "spam_prediction": "Spam",
+        "spam_confidence": 58.08,
+        "phishing_prediction": "Safe",
+        "phishing_confidence": 80.61,
+        "risk_score": 82,
+        "threat_level": "HIGH",
+        "keywords": [
+            "verify",
+            "account",
+            "login"
+        ],
+        "url_count": 1,
+        "timestamp": "2026-06-19 23:43:35"
+    },
+    {
+        "spam_prediction": "Spam",
+        "spam_confidence": 53.84,
+        "phishing_prediction": "Safe",
+        "phishing_confidence": 91.52,
+        "risk_score": 78,
+        "threat_level": "MEDIUM",
+        "keywords": [
+            "verify",
+            "account",
+            "click"
+        ],
+        "url_count": 1,
+        "timestamp": "2026-06-20 11:06:14"
+    },
+    {
+        "spam_prediction": "Safe",
+        "spam_confidence": 69.5,
+        "phishing_prediction": "Safe",
+        "phishing_confidence": 52.44,
+        "risk_score": 12,
+        "threat_level": "LOW",
+        "keywords": [
+            "password",
+            "account",
+            "login"
+        ],
+        "url_count": 0,
+        "timestamp": "2026-06-20 11:25:50"
+    },
+    {
+        "spam_prediction": "Spam",
+        "spam_confidence": 53.84,
+        "phishing_prediction": "Safe",
+        "phishing_confidence": 91.52,
+        "risk_score": 78,
+        "threat_level": "MEDIUM",
+        "keywords": [
+            "verify",
+            "account",
+            "click"
+        ],
+        "url_count": 1,
+        "timestamp": "2026-06-20 11:51:46"
+    },
+    {
+        "spam_prediction": "Spam",
+        "spam_confidence": 53.84,
+        "phishing_prediction": "Safe",
+        "phishing_confidence": 91.52,
+        "risk_score": 78,
+        "threat_level": "MEDIUM",
+        "keywords": [
+            "verify",
+            "account",
+            "click"
+        ],
+        "url_count": 1,
+        "timestamp": "2026-06-20 11:55:49"
+    },
+    {
+        "spam_prediction": "Spam",
+        "spam_confidence": 53.84,
+        "phishing_prediction": "Safe",
+        "phishing_confidence": 91.52,
+        "risk_score": 78,
+        "threat_level": "MEDIUM",
+        "keywords": [
+            "verify",
+            "account",
+            "click"
+        ],
+        "url_count": 1,
+        "timestamp": "2026-06-20 12:02:05"
+    },
+    {
+        "spam_prediction": "Safe",
+        "spam_confidence": 51.33,
+        "phishing_prediction": "Safe",
+        "phishing_confidence": 82.14,
+        "risk_score": 20,
+        "threat_level": "LOW",
+        "keywords": [
+            "verify",
+            "account"
+        ],
+        "url_count": 1,
+        "timestamp": "2026-06-20 12:21:16"
+    }
+]
