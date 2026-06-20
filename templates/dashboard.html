@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CyberShield AI - Analytics Dashboard</title>
+    <link rel="stylesheet" href="/static/style.css">
+</head>
+
+<body>
+
+    <nav>
+        <div class="logo">CyberShield AI</div>
+        <div class="nav-right">
+            <div class="nav-links">
+                <a href="/">Scanner</a>
+                <a href="/dashboard">Dashboard</a>
+            </div>
+            <button class="theme-toggle" id="themeToggleBtn" onclick="toggleTheme()"></button>
+        </div>
+    </nav>
+
+    <div class="dashboard-container">
+        <h1 style="margin-bottom: 32px;">Threat Intelligence Dashboard</h1>
+
+        <div class="stats-grid">
+            <div class="card">
+                <h2 id="totalScans">{{ stats.total_scans | default(0) }}</h2>
+                <p>Total Scans</p>
+            </div>
+            <div class="card">
+                <h2 id="spamCount" style="color: var(--danger);">{{ stats.spam_detected | default(0) }}</h2>
+                <p>Spam Detected</p>
+            </div>
+            <div class="card">
+                <h2 id="phishingCount" style="color: var(--warning);">{{ stats.phishing_detected | default(0) }}</h2>
+                <p>Phishing Detected</p>
+            </div>
+            <div class="card">
+                <h2 id="highThreats" style="color: var(--danger);">{{ stats.high_threats | default(0) }}</h2>
+                <p>High Threats</p>
+            </div>
+        </div>
+
+        <div class="card" style="text-align: left; padding: 32px;">
+            <p
+                style="font-size: 0.75rem; font-weight: 700; color: var(--muted); text-transform: uppercase; letter-spacing: 0.5px; margin-bottom: 6px;">
+                Active Selection Profile</p>
+            <h3 style="font-size: 1.5rem; margin-bottom: 20px;">Logistic Regression</h3>
+
+            <div class="model-metrics-summary-grid">
+                <div class="metric-box"><label>Accuracy</label>
+                    <div style="font-size:1.2rem;">96.77%</div>
+                </div>
+                <div class="metric-box"><label>Precision</label>
+                    <div style="font-size:1.2rem;">97.50%</div>
+                </div>
+                <div class="metric-box"><label>Recall</label>
+                    <div style="font-size:1.2rem;">78.00%</div>
+                </div>
+                <div class="metric-box"><label>F1 Score</label>
+                    <div style="font-size:1.2rem;">86.67%</div>
+                </div>
+            </div>
+
+            <h4
+                style="font-size: 0.85rem; color: var(--muted); text-transform: uppercase; margin-bottom: 10px; font-weight:600;">
+                Selection Optimization Rationale:</h4>
+            <ul style="padding-left: 20px; color: var(--text); font-size: 0.9rem; line-height: 1.8;">
+                <li>Stable Classification Probabilities on Variable Datasets</li>
+                <li>Highly Linear Convergence via Softmax Vector Regularization</li>
+                <li>Fast Prediction Execution Over Complex NLP Feature Extraction Arrays</li>
+            </ul>
+        </div>
+
+        <div class="dashboard-split-row">
+
+            <div class="table-card" style="margin-bottom:0;">
+                <h3
+                    style="font-size: 0.85rem; color:var(--muted); font-family:var(--font-mono); text-transform:uppercase; margin-bottom: 16px; letter-spacing:0.5px;">
+                    Model Comparison Benchmarks</h3>
+                <div class="responsive-table-wrapper">
+                    <table>
+                        <thead>
+                            <tr>
+                                <th>Model Name</th>
+                                <th>Accuracy</th>
+                                <th>Precision</th>
+                                <th>Recall</th>
+                                <th>F1 Score</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            {% for model in metrics %}
+                            <tr {% if model.Model=='Logistic Regression'
+                                %}style="outline: 1px solid var(--border-hover); border-radius:12px;" {% endif %}>
+                                <td style="font-weight: 600;">{{ model.Model }} {% if model.Model == 'Logistic
+                                    Regression' %}<span
+                                        style="font-size: 0.7rem; background: var(--border-hover); padding: 2px 6px; border-radius:4px; margin-left: 4px;">ACTIVE</span>{%
+                                    endif %}</td>
+                                <td>{{ model.Accuracy }}%</td>
+                                <td>{{ model.Precision }}%</td>
+                                <td>{{ model.Recall }}%</td>
+                                <td style="font-weight: 700; color: var(--text);">{{ model["F1 Score"] }}%</td>
+                            </tr>
+                            {% endfor %}
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+
+            <div class="chart-card" style="margin-bottom:0;">
+                <h3
+                    style="font-size: 0.85rem; color:var(--muted); font-family:var(--font-mono); text-transform:uppercase; margin-bottom: 16px; letter-spacing:0.5px; text-align:left;">
+                    Real-time Metrics</h3>
+                <div class="chart-container-wrapper">
+                    <canvas id="threatChart"></canvas>
+                </div>
+            </div>
+
+        </div>
+
+        <div class="table-card">
+            <h3
+                style="font-size: 0.85rem; color:var(--muted); font-family:var(--font-mono); text-transform:uppercase; margin-bottom: 16px; letter-spacing:0.5px;">
+                Recent Threat Activity Logs</h3>
+            <div class="table-scroll-container">
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Timestamp Identifier</th>
+                            <th>Spam Status</th>
+                            <th>Phishing Status</th>
+                            <th>Risk Value</th>
+                            <th>Calculated Threat</th>
+                        </tr>
+                    </thead>
+                    <tbody id="recentScans">
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+
+    <footer>
+        <div class="footer-left">
+            <div class="live-indicator-dot"></div>
+            INTEL_FEED: LIVE SECURE
+        </div>
+        <div class="footer-right">&copy; 2026 CyberShield AI Engine</div>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script src="/static/script.js"></script>
+</body>
+
+</html>
